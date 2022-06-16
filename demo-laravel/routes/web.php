@@ -47,4 +47,4 @@ Route::post('tinhtong',[SumController::class,'tinhtong']);
 // Route::post('/admin',[AdminController::class,'addRoom']);
 
 
-Route::get('/trangchu',[PageController::class,'getIndex']);
+Route::get('trangchu',[PageController::class,'getIndex']);

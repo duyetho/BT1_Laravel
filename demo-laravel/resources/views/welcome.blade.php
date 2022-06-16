@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">  
-        <h1>Trang chu</h1>
+        <h1>Hello Sky</h1>
     </body>
 </html>
