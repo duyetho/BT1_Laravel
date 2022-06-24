@@ -28,9 +28,10 @@ use App\Http\Controllers\PageController;
 
 //tại <a href="{{route:...}}"> khi nhấn vào nút thêm thì hiện form 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+    
+// });
 
 //Route::get('hello',[UserController::class],'xinchao');
 //Route::get('test', [MyController::class, 'index']);
@@ -46,5 +47,15 @@ Route::post('tinhtong',[SumController::class,'tinhtong']);
 // Route::get('/admin',[AdminController::class,'index']);
 // Route::post('/admin',[AdminController::class,'addRoom']);
 
+Route::get('/',[PageController::class,'getIndex']);
 
-Route::get('trangchu',[PageController::class,'getIndex']);
+Route::get('/contact',[PageController::class,'getContact']);
+Route::get('/about',[PageController::class,'getAbout']);
+
+Route::get('/type/{id}',[PageController::class,'getLoaiSp']);
+
+Route::get('/formAdd',[PageController::class,'getAdminAdd']);
+
+Route::get('/admin-add-form',[PageController::class,'getAdminAdd'])->name('add-product');
+Route::post('/admin-add-form',[PageController::class,'postAdminAdd']);
+
